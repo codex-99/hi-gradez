@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Hi-Gradez || User Management</title>
+</head>
+
+<body>
+    <h1>User Management</h1></br>
+    {{# each dataList}}
+    <div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Sample ID</label>
+            <div class="form-control" id="formGroupExampleInput">{{this.sampleId}}</div>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Date</label>
+            <div class="form-control" id="formGroupExampleInput">{{this.date}}</div>
+        </div>
+        <form action="/userM" method="post">
+            <input type="text" name="n_id" placeholder="SampleId">
+            <input type="radio" name="result" value="Sample Collected">Sample Collected</input>
+            <input type="radio" name="result" value="Testing Under Process">Testing Under Process</input>
+            <input type="radio" name="result" value="Covid Positive">Covid Positive</input>
+            <input type="radio" name="result" value="Covid Negative">Covid Negative</input>
+            <input type="submit" value="submit"></input>
+        </form>
+    </div>
+    </br></br>
+    {{/each}}
+</body>
+
+</html>

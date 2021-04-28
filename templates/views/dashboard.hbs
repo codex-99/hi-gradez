@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Hi-Gradez</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <div class="getMyselfTested">
+        <form action="/dashboard" method="post">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Age</label>
+            <input type="number" class="form-control" id="formGroupExampleInput" name="age" placeholder="Age"/>
+            </div>
+
+            <div class="form-group">
+                <label for="formGroupExampleInput">Date</label>
+            <input type="date" class="form-control" id="formGroupExampleInput" name="date" placeholder="DDMMYYYY"/>
+            </div>
+            <div class="form-group symptons">
+                <label for="formGroupExampleInput"><strong>Symptons</strong></label>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput" name="symp" value="Fever">Fever</input>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput"name="symp" value="Dry Cough">Dry Cough</input>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput"name="symp" value="Tiredness">Tiredness</input>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput"name="symp" value="Difficulty in Breathing">Difficulty in Breathing</input>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput"name="symp" value="Chest Pain">Chest Pain</input>
+                <input type="checkbox"class="form-control" id="formGroupExampleInput" name="symp" value="Loss of Smell or Taste">Loss of Smell or Taste</input>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput"name="symp" value="Aches and Pain">Aches and Pain</input>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput"name="symp" value="Conjunctivitis">Conjunctivitis</input>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput"name="symp" value="Diarrhoea">Diarrhoea</input>
+                <input type="checkbox" class="form-control" id="formGroupExampleInput"name="symp" value="Headache">Headache</input>
+            </div>
+            <input type="submit" value="Submit Form"/>
+        </form>
+    </div>
+
+    {{>footer}}
+</body>
+
+</html>
